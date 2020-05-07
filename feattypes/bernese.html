@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html {
+	height: 100%;
+	background-image: url("../images/d085ac698513adc2a10bd35ddc498ed1.jpg");
+}
+
+body {
+	position: relative;
+    background: dodgerblue;
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	max-width: 960px;
+	min-height: 100%;
+	margin: auto;
+	box-shadow: -5px -5px 15px 5px gray;
+	border-radius: 50px;
+}
+h1 {
+	margin: .5em .75em;
+	text-align: center;
+}
+
+/* the styles for links */
+a:link, a:visited {
+	text-decoration: none;
+}
+a:focus, a:hover {
+	text-decoration: underline;
+}
+
+
+/* the styles for the header */
+header img {
+	padding: 0 1em 0 0;
+	float: left;
+	max-width: 200px;
+	width: 100%;
+}
+header h2 {
+    font-size: 225%;
+    padding: 2em 0 .25em 0;
+}
+
+
+/* text shadow class */
+.shadow {
+	text-shadow: 2px 2px 2px #5d5d5d;
+}
+
+
+/* the styles for the navigation menu */
+#nav_menu {
+	clear: both;
+}
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+	width: 25%;
+}
+#nav_menu ul li a {
+	display: block;
+	text-align: center;
+	padding: 1em 0;
+	text-decoration: none;
+	font-variant: small-caps;
+	font-size: 120%;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+#nav_menu a:hover {
+	background-color: lightskyblue;
+	font-style: italic;
+	color: black;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+}
+#nav_menu ul ul li a {
+	text-align: left;
+	padding: .5em;
+
+}
+#nav_menu ul ul li {
+	float: none;
+
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+
+
+/* the styles for the main content */
+main {
+    width: 100%;
+    margin: auto;
+    width: 90%;
+    padding: 0 2.5% 20px 2.5%;
+}
+main p {
+	font: 110%;
+	line-height: 2;
+    text-indent: 50px;
+}
+.imgright {
+	float: right;
+	border: 1px solid black;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 5px;
+	margin-right: 6px;
+	max-width: 40%;
+	min-width: 150px;
+}
+.imgleft {
+    float: left;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	margin-left: 6px;
+	margin-right: 15px;
+	max-width: 40%;
+	min-width: 150px;
+}
+
+
+
+#bottombuffer {
+	height: 100px;
+	padding-bottom: 100px;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: black;
+	clear: both;
+	border-top: 3px solid #000000;
+/*	position: fixed;    */
+/*	bottom: 0;			*/
+	max-width: 960px;
+	width: 100%;
+	border-radius: 0 0 50px 50px;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	font-size: 80%;
+	font-variant: small-caps;
+	padding: 2em 0;
+}
+
+
+
+/* hide the slicknav in large-screen view */
+.slicknav_menu {
+	display: none;
+}
+
+
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+	body {
+		box-shadow: none;
+		border-radius: 0;
+	}
+	footer {
+		border-radius: 0;
+	}
+}
+
+
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+	
+	header img { float: none; }
+	header { text-align: center; }
+	header h2, header h3 {
+		padding: 0 0 .25em;
+	}
+
+	section {
+		float: none;
+		width: 99%;
+		margin: 0 auto;
+		padding: .5em;
+	}
+
+	/* hide the navigation menu */
+	#nav_menu {
+		display: none;
+	}
+	
+	/* and replace it with the slicknav menu */
+	.slicknav_menu {
+		display: block;
+		text-align: left !important;
+		background-color: black !important;
+	}
+}
+
+
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+}
+
+        
+        
+</style>
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- favicon link -->
+	<link rel="shortcut icon" href="images/favicon">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/slicknav.css">
+
+    <!-- slicknav -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>   <!-- Link to jQuery Content Delivery Network - Necessary for SlickNav to work correctly -->
+    <script src="../js/jquery.slicknav.min.js"></script>                     <!-- Link to the slicknav file inside the js folder - Necessary for SlickNav to work correctly -->
+
+	<!-- slicknav javascript - this javascript code will use the UL inside the nav_menu tag to build the same menu in slickNav format -->
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+    	});
+    </script>
+
+</head>
+
+
+
+<body>
+
+	<header>
+
+		<img class="clearfix" src="../images/paw.png">
+
+		<h2>Dogs</h2>
+
+	</header>
+
+
+    <nav id="mobilemenu"></nav>
+	<nav id="nav_menu">
+    	<ul>
+        	<li><a href="../index.html" class="current">Home</a></li>
+        	<li><a href="../gallery.html" class="current">Photos</a></li>
+			<li><a href="feattypes" class="current">Featured Types</a>
+			<ul>
+				<li><a href="../feattypes/golden.html">Golden Retrievers</a></li>
+				<li><a href="../feattypes/bernese.html">Bernese Mountain Dogs</a></li>
+				<li><a href="../feattypes/basset.html">Basset Hounds</a></li>
+			</ul>
+			</li>
+        	<li><a href="mailto:dogs@thebestdogwebsiteever.com" class="current">Email Us</a></li>
+    	</ul>
+	</nav>
+
+
+	<main>
+
+		<h1>The Bernese Mountain Dog</h1>
+
+            <img class="imgright" src="../images/bernese.jpeg">
+
+			<p>
+                The Bernese Mountain Dog is a large, sturdy worker who can stand over 27 inches at the shoulder. The thick, silky, and moderately long coat is tricolored: jet black, clear white, and rust. The distinctive markings on the coat and face are breed hallmarks and, combined with the intelligent gleam in the dark eyes, add to the Berner’s aura of majestic nobility. A hardy dog who thrives in cold weather, the Berner’s brain and brawn helped him multitask on the farms and pastures of Switzerland.
+
+                Berners get along with the entire family and are particularly gentle with children, but they will often become more attached to one lucky human. Berners are imposing but not threatening, and they maintain an aloof dignity with strangers.
+            </p>
+
+            <p>The Bernese Mountain Dog is an extremely versatile working dog from the farmlands of Switzerland. They were developed to herd cattle, pull carts, and be watchdogs and loyal companions. They are one of four types of Swiss Mountain Dogs, and the only one with long hair. The Bernese Mountain Dog comes from the canton of Bern, hence their name. They’re a large and sturdy dog breed, with a friendly and calm disposition, and they’re also well-suited to conformation, obedience, tracking, herding, and carting competitions.</p>
+
+            <img class="imgleft" src="../images/bernese-mountain-dog-1177074_1920.jpg">
+
+            <p> A novice dog owner might be attracted to this breed’s friendly disposition, intelligence, and highly trainable nature. However, first-time dog owners should beware. The Bernese Mountain Dog’s size and high energy can make handling difficult. Thus, they don’t appreciate being cooped up in apartments all day. They shed a lot, and they tend to need the drool wiped from their faces every once in a while. Dogs of this breed are great watchdogs, but that also means they have a tendency to bark–loudly. They may want to chase smaller animals and play roughly, even though they are quite gentle when fully mature and trained properly.</p>  </p>
+    
+            <p>
+                Although, for an experienced owner who can match the Bernese’s energy, provide open space, keep up with grooming, and dedicate time and effort to training, this breed will show unconditional love and loyalty. A well-trained Bernese makes an excellent companion that will adore the whole family. They love kids and will even greet newcomers to the home warmly, so long as they’ve had adequate socialization training. There aren’t many breeds with a greater predisposition for friendliness. Therefore, if you’re ready for the challenge, you’ll never regret adopting a Bernese Mountain Dog.
+            </p>
+
+
+		<div id="bottombuffer"><br><br></div>
+
+	</main>
+
+
+	<footer>
+
+		<p>
+			<script>
+				var today = new Date();
+				document.write("&copy;&nbsp;");
+				document.write(today.getFullYear());
+				document.write(" Copyright ~ Delaney Proko Productions")
+			</script>
+		</p>
+
+	</footer>
+
+</body>
+
+</html>

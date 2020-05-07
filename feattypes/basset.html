@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html {
+	height: 100%;
+	background-image: url("../images/d085ac698513adc2a10bd35ddc498ed1.jpg");
+}
+
+body {
+	position: relative;
+    background: dodgerblue;
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	max-width: 960px;
+	min-height: 100%;
+	margin: auto;
+	box-shadow: -5px -5px 15px 5px gray;
+	border-radius: 50px;
+}
+h1 {
+	margin: .5em .75em;
+	text-align: center;
+}
+
+/* the styles for links */
+a:link, a:visited {
+	text-decoration: none;
+}
+a:focus, a:hover {
+	text-decoration: underline;
+}
+
+
+/* the styles for the header */
+header img {
+	padding: 0 1em 0 0;
+	float: left;
+	max-width: 200px;
+	width: 100%;
+}
+header h2 {
+    font-size: 225%;
+    padding: 2em 0 .25em 0;
+}
+
+
+/* text shadow class */
+.shadow {
+	text-shadow: 2px 2px 2px #5d5d5d;
+}
+
+
+/* the styles for the navigation menu */
+#nav_menu {
+	clear: both;
+}
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+	width: 25%;
+}
+#nav_menu ul li a {
+	display: block;
+	text-align: center;
+	padding: 1em 0;
+	text-decoration: none;
+	font-variant: small-caps;
+	font-size: 120%;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+#nav_menu a:hover {
+	background-color: lightskyblue;
+	font-style: italic;
+	color: black;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+}
+#nav_menu ul ul li a {
+	text-align: left;
+	padding: .5em;
+
+}
+#nav_menu ul ul li {
+	float: none;
+
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+
+
+/* the styles for the main content */
+main {
+    width: 100%;
+    margin: auto;
+    width: 90%;
+    padding: 0 2.5% 20px 2.5%;
+}
+main p {
+	font: 110%;
+	line-height: 2;
+    text-indent: 50px;
+}
+.imgright {
+	float: right;
+	border: 1px solid black;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 5px;
+	margin-right: 6px;
+	max-width: 40%;
+	min-width: 150px;
+}
+.imgleft {
+    float: left;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	margin-left: 6px;
+	margin-right: 15px;
+	max-width: 40%;
+	min-width: 150px;
+}
+
+
+
+#bottombuffer {
+	height: 100px;
+	padding-bottom: 100px;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: black;
+	clear: both;
+	border-top: 3px solid #000000;
+/*	position: fixed;    */
+/*	bottom: 0;			*/
+	max-width: 960px;
+	width: 100%;
+	border-radius: 0 0 50px 50px;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	font-size: 80%;
+	font-variant: small-caps;
+	padding: 2em 0;
+}
+
+
+
+/* hide the slicknav in large-screen view */
+.slicknav_menu {
+	display: none;
+}
+
+
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+	body {
+		box-shadow: none;
+		border-radius: 0;
+	}
+	footer {
+		border-radius: 0;
+	}
+}
+
+
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+	
+	header img { float: none; }
+	header { text-align: center; }
+	header h2, header h3 {
+		padding: 0 0 .25em;
+	}
+
+	section {
+		float: none;
+		width: 99%;
+		margin: 0 auto;
+		padding: .5em;
+	}
+
+	/* hide the navigation menu */
+	#nav_menu {
+		display: none;
+	}
+	
+	/* and replace it with the slicknav menu */
+	.slicknav_menu {
+		display: block;
+		text-align: left !important;
+		background-color: black !important;
+	}
+}
+
+
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+}
+
+        
+        
+</style>
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- favicon link -->
+	<link rel="shortcut icon" href="images/favicon">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/slicknav.css">
+
+    <!-- slicknav -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>   <!-- Link to jQuery Content Delivery Network - Necessary for SlickNav to work correctly -->
+    <script src="../js/jquery.slicknav.min.js"></script>                     <!-- Link to the slicknav file inside the js folder - Necessary for SlickNav to work correctly -->
+
+	<!-- slicknav javascript - this javascript code will use the UL inside the nav_menu tag to build the same menu in slickNav format -->
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+    	});
+    </script>
+
+</head>
+
+
+
+<body>
+
+	<header>
+
+		<img class="clearfix" src="../images/paw.png">
+
+		<h2>Dogs</h2>
+
+	</header>
+
+
+    <nav id="mobilemenu"></nav>
+	<nav id="nav_menu">
+    	<ul>
+        	<li><a href="../index.html" class="current">Home</a></li>
+        	<li><a href="../gallery.html" class="current">Photos</a></li>
+			<li><a href="feattypes" class="current">Featured Types</a>
+			<ul>
+				<li><a href="../feattypes/golden.html">Golden Retrievers</a></li>
+				<li><a href="../feattypes/bernese.html">Bernese Mountain Dogs</a></li>
+				<li><a href="../feattypes/basset.html">Basset Hounds</a></li>
+			</ul>
+			</li>
+        	<li><a href="mailto:dogs@thebestdogwebsiteever.com" class="current">Email Us</a></li>
+    	</ul>
+	</nav>
+
+
+	<main>
+
+		<h1>The Basset Hound</h1>
+
+            <img class="imgright" src="../images/basset.jpeg">
+
+			<p>
+                The Basset Hound stands no higher than 14 inches at the shoulder but, with his remarkably heavy bone, powerful little legs, and massive paws, he possesses big-dog strength and stamina. Bassets are famous for a large, domed head that features extremely long, velvety ears, mournful eyes, and a wrinkled brow, which give the breed the look of a sad clown. Built more for endurance than speed, the Basset moves in a deliberate but effortless manner. The breed’s scenting ability is uncanny; it’s said that among dogs only the Bloodhound’s nose is more accurate. Mild and agreeable at home, the Basset is stubborn on the trail and barks in a loud, ringing voice. Although they may not be wildly demonstrative in their affections, they are steadfastly loyal.
+            </p>
+
+            <p>
+                    He may be best known as the Hush Puppy dog, but the Basset Hound is much more than an advertising icon. With his placid personality and short-statured yet noble appearance, the Basset Hound is a popular family companion, as well as a slow-paced but keen hunting dog.
+
+                    The name Basset comes from the French word bas, meaning low. And Basset Hounds certainly are low to the ground. Because their bones are heavy and they are muscular, they usually weigh 50 to 65 pounds although they typically are no more than 14 inches tall at the highest point of the shoulder. In reality, they are big dogs on short legs. Their short-legged appearance is the result of a form of dwarfism called achondroplasia. Despite his large size, the Basset believes he's a lap dog and will do his best to fit in yours.
+                    
+                    Bassets are scent hounds, meaning that they were bred to hunt by following the scent of their prey. Their phenomenal sense of smell is second only to that of the Bloodhound.</p>
+
+                <img class="imgleft" src="../images/basset 2.jpeg">
+                    
+            <p>    Basset Hounds have smooth, short, hard-textured coats that are relatively easy to take care of. Most of them come in the classic tri-color pattern of black, tan, and white, but they can also be what's known as open red and white (red spots on a white coat), closed red and white (solid red with white feet and tail), or lemon and white. On occasion you may see a gray (also called blue) Basset, but this color is considered undesirable because it's thought to be associated with genetic problems.</p>
+                    
+            <p>   The Basset Hound has a rounded skull with a deep muzzle and a lot of loose skin on the face, which is heavily wrinkled over the brow when the dog is tracking. This loose skin also causes Bassets to have a sad look, which many people think adds to their charm.
+                    
+                    Because they were originally bred to be hunting dogs, many of the features of the Basset Hounds have a purpose. Their long, low-set ears drag the ground and pick up scents, while the loose skin around their heads form wrinkles that further capture the scent of whatever they are tracking.
+                    
+                    Their short legs mean that they move more slowly than longer-legged dogs, which makes it easier for hunters on foot to follow them. Their tails are long and stand upright with a white tip at the end, which makes it easy for hunters to see when the dogs are in tall grass. Basset Hounds also have massive paws and their front feet turn outward slightly to balance the width of the shoulders.
+                    
+                    Around the house, Basset Hounds are calm and rather lazy. They are loyal to their people and have a pleasant, friendly disposition. Because they originally were bred as pack dogs, they love to be with their families and also do well with other pets. Bassets hate to be left alone for long periods of time, and may become destructive and howl if left alone for too long. Their distinctive baying bark is loud and travels long distances.</p>
+
+
+		<div id="bottombuffer"><br><br></div>
+
+	</main>
+
+
+	<footer>
+
+		<p>
+			<script>
+				var today = new Date();
+				document.write("&copy;&nbsp;");
+				document.write(today.getFullYear());
+				document.write(" Copyright ~ Delaney Proko Productions")
+			</script>
+		</p>
+
+	</footer>
+
+</body>
+
+</html>

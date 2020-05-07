@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <h1>Dogs</h1>
-    <h2>Under Construction</h2>
+	<meta charset="utf-8">
+	<meta name="description" content="This sentence will appear under the link in search engine results.">
+	<meta name="keywords" content="list,of,words,separated,by,commas,that,describe,your,site">
+	<meta name="author" content="Delaney Proko">
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- shiv which should be a shim -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- tab title -->
+	<title>[Page Title Which Appears in the Tab]</title>
+
+	<!-- favicon link -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+
+    <!-- slicknav -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>   <!-- Link to jQuery Content Delivery Network - Necessary for SlickNav to work correctly -->
+    <script src="js/jquery.slicknav.min.js"></script>                     <!-- Link to the slicknav file inside the js folder - Necessary for SlickNav to work correctly -->
+
+	<!-- slicknav javascript - this javascript code will use the UL inside the nav_menu tag to build the same menu in slickNav format -->
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+    	});
+    </script>
+
 </head>
+
+
+
 <body>
-    <p>
-        My website for the final project will be about dogs. There will be a menu bar at the top with three different types of dogs such as: Golden Retrievers, Bernese Mountain Dogs and Basset Hounds. Each page will have information and pictures about that type of dog.
-    </p>
+
+	<header>
+
+		<img class="clearfix" src="images/paw.png">
+
+		<h2>Dogs</h2>
+
+	</header>
+
+
+    <nav id="mobilemenu"></nav>
+	<nav id="nav_menu">
+    	<ul>
+        	<li><a href="index.html" class="current">Home</a></li>
+        	<li><a href="gallery.html" class="current">Photos</a></li>
+			<li><a class="current">Featured Types</a>
+			<ul>
+				<li><a href="feattypes/golden.html">Golden Retrievers</a></li>
+				<li><a href="feattypes/bernese.html">Bernese Mountain Dogs</a></li>
+				<li><a href="feattypes/basset.html">Basset Hounds</a></li>
+			</ul>
+			</li>
+        	<li><a href="mailto:dogs@thebestdogwebsiteever.com" class="current">Email Us</a></li>
+    	</ul>
+	</nav>
+
+
+	<main>
+
+		<h1>The Domestic Dog</h1>
+
+		<section>
+
+			<p>Ranging from tiny Chihuahuas to enormous Great Danes and every breed and magnificent mutt in between, dogs are an incredibly diverse species. Our best friends and furry family members provide us affection and company—but many dogs face neglect, exploitation and cruelty both here and abroad.</p>
+
+			<img src="images/working-group-dogs.png">
+
+			<p>Dogs were probably the first tame animals. They have accompanied humans for at least 20,000 years and possibly as many as 40,000. Scientists generally agree that all dogs, domestic and wild, share a common wolf ancestor; at some point grey wolves and dogs went on their separate evolutionary ways.</p>
+
+			<p>The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a member of the genus Canis (canines), which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore. The dog and the extant gray wolf are sister taxa as modern wolves are not closely related to the wolves that were first domesticated, which implies that the direct ancestor of the dog is extinct. The dog was the first species to be domesticated, and has been selectively bred over millennia for various behaviors, sensory capabilities, and physical attributes.</p>
+
+			<p>Their long association with humans has led dogs to be uniquely attuned to human behavior and they are able to thrive on a starch-rich diet that would be inadequate for other canids. Dogs vary widely in shape, size and colors. They perform many roles for humans, such as hunting, herding, pulling loads, protection, assisting police and military, companionship and, more recently, aiding disabled people and therapeutic roles. This influence on human society has given them the sobriquet of "man's best friend".</p>
+
+			<img src="images/dogs.jpeg">
+
+			<p>The domestic dog is the first species, and the only large carnivore, known to have been domesticated. Especially over the past 200 years, dogs have undergone rapid phenotypic change and were formed into today's modern dog breeds due to artificial selection by humans. These breeds can vary in size and weight from a 0.46 kg (1.0 lb) teacup poodle to a 90 kg (200 lb) giant mastiff. Phenotypic variation can include height measured to the withers ranging from 15.2 centimetres (6.0 in) in the Chihuahua to 76 cm (30 in) in the Irish Wolfhound; color varies from white through grays (usually called "blue") to black, and browns from light (tan) to dark ("red" or "chocolate") in a wide variation of patterns; coats can be short or long, coarse-haired to wool-like, straight, curly, or smooth. The skull, body, and limb proportions vary significantly between breeds, with dogs displaying more phenotypic diversity than can be found within the entire order of carnivores. Some breeds demonstrate outstanding skills in herding, retrieving, scent detection, and guarding, which demonstrates the functional and behavioral diversity of dogs. The first dogs were domesticated from shared ancestors of modern wolves, however the phenotypic changes that coincided with the dog–wolf genetic divergence are not known.</p>
+
+			
+
+		</section>
+
+		<aside>
+
+			<p>Dog of the Month: </p>
+
+			<p>Apollo Proko</p>
+
+			<img src="images/IMG_8598 copy.JPG"  height="400" width="200">
+
+			<p>Apollo is a Golden Retriever, Catahoula Leopard Dog and Husky mix. He is 13 years old and a rescue from Virginia.</p>
+
+		</aside>
+
+		<div id="bottombuffer"><br><br></div>
+
+	</main>
+
+
+	<footer>
+
+		<p>
+			<script>
+				var today = new Date();
+				document.write("&copy;&nbsp;");
+				document.write(today.getFullYear());
+				document.write(" Copyright ~ Delaney Proko Productions")
+			</script>
+		</p>
+
+	</footer>
+
 </body>
+
 </html>
