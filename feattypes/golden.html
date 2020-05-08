@@ -122,10 +122,11 @@ header h2 {
 
 
 /* the styles for the main content */
-main {
-    width: 100%;
+main section {
+	width: 75%;
+	float: right;
+	color: black;
     margin: auto;
-    width: 90%;
     padding: 0 2.5% 20px 2.5%;
 }
 main p {
@@ -152,6 +153,38 @@ main p {
 	margin-right: 15px;
 	max-width: 40%;
 	min-width: 150px;
+}
+
+main aside {
+	width: 20%;
+	float: left;
+	font: 100%;
+	line-height: 25px;
+	margin-left: 30px;
+}
+main aside h2 {
+	text-align: center;
+	padding-bottom: 8px;
+	font-size: 125%;
+}
+main aside ul li a {
+	color: black;
+	display: block;
+	border: 2px solid black;
+	padding-left: 3px;
+}
+main aside ul {
+	list-style-type: none;
+	padding-bottom: 2px;
+	
+}
+main aside ul li {
+	margin: 0 auto .5em;
+}
+main aside a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: black;
 }
 
 
@@ -302,6 +335,8 @@ footer p {
 
 		<h1>The Golden Retriever</h1>
 
+		<section>
+
             <img class="imgright" src="../images/golden.jpeg">
 
 			<p>
@@ -321,8 +356,18 @@ footer p {
                 These dogs are fairly easy to train and get along in just about any home or family. They’re great with kids and very protective of their humans. If you want a loyal, loving, and intelligent companion, consider adopting one of these pups into your pack.
 
                 DogTime recommends this dog bed to give a good night’s sleep to your medium-sized Golden. You should also pick up this dog de-shedder for your high shedding pup!
-            </p>
+			</p>
 
+			
+		</section>
+
+			<aside>
+				<h2>Other Featured Types of Dogs</h2>
+				<ul>
+					<li><a href="bernese.html">Bernese Mountain Dogs</a></li>
+					<li><a href="basset.html">Basset Hounds</a></li>
+				</ul>
+			</aside>
 
 		<div id="bottombuffer"><br><br></div>
 
