@@ -48,9 +48,9 @@ a:focus, a:hover {
 
 /* the styles for the header */
 header img {
-	padding: 0 1em 0 0;
+	padding: 1.5em;
 	float: left;
-	max-width: 200px;
+	max-width: 140px;
 	width: 100%;
 }
 header h2 {
@@ -186,7 +186,28 @@ main aside a:hover {
 	background-color: black;
 }
 
+main h3 {
+	font-size: 140%;
+	padding: .5em;
+	color: white;
+	width: 100%;
+}
+#video {
+	position: relative;
+  margin: 0 auto;
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 50%;
+}
 
+#video iframe {
+	padding: 1em;
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+}
 
 
 #bottombuffer {
@@ -245,11 +266,22 @@ footer p {
 		padding: 0 0 .25em;
 	}
 
-	section {
+	main section {
 		float: none;
 		width: 99%;
 		margin: 0 auto;
 		padding: .5em;
+	}
+	main aside {
+		display: none;
+	}
+
+	#video {
+		width: 100%;
+	}
+	#video iframe {
+		border: 0;
+		width: 100%;
 	}
 
 	/* hide the navigation menu */
@@ -307,7 +339,7 @@ footer p {
 
 	<header>
 
-		<img class="clearfix" src="../images/paw.png">
+		<img class="clearfix" src="../images/1200px_black_paw.png">
 
 		<h2>Dogs</h2>
 
@@ -354,6 +386,14 @@ footer p {
             <p>
                 Although, for an experienced owner who can match the Bernese’s energy, provide open space, keep up with grooming, and dedicate time and effort to training, this breed will show unconditional love and loyalty. A well-trained Bernese makes an excellent companion that will adore the whole family. They love kids and will even greet newcomers to the home warmly, so long as they’ve had adequate socialization training. There aren’t many breeds with a greater predisposition for friendliness. Therefore, if you’re ready for the challenge, you’ll never regret adopting a Bernese Mountain Dog.
 			</p>
+
+			<h3>Video about Bernese Mountain Dogs: </h3>
+
+			<div id="video">
+
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/X4mupT2AIsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			</div>
 			
 		</section>
 

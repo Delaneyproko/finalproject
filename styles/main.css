@@ -44,9 +44,9 @@ a:focus, a:hover {
 
 /* the styles for the header */
 header img {
-	padding: 0 1em 0 0;
+	padding: 1.5em;
 	float: left;
-	max-width: 200px;
+	max-width: 140px;
 	width: 100%;
 }
 header h2 {
@@ -164,6 +164,8 @@ aside img {
 	margin-left: auto;
 	display: block;
 	padding-bottom: 1.5em;
+	max-width: 200px;
+	width: 100%;
 }
 aside p {
 	padding-bottom: 1.5em;
